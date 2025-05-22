@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Пиксельный отпечаток</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <h1>Генератор пиксельного отпечатка</h1>
+    <div class="app">
+        <div class="input-section">
+            <form id="dataForm">
+                <div class="form-group">
+                    <label for="type">Должность (до 32 символов):</label>
+                    <input type="text" id="type" maxlength="32" required value="Junior Frontend Developer">
+                </div>
+
+                <div class="form-group">
+                    <label for="name">Имя (до 16 символов):</label>
+                    <input type="text" id="name" maxlength="16" required value="Kseniya">
+                </div>
+
+                <div class="form-group">
+                    <label for="age">Возраст (до 2 символов):</label>
+                    <input type="text" id="age" maxlength="2" required value="38">
+                </div>
+
+                <div class="form-group">
+                    <label for="skills">Навыки (до 64 символов):</label>
+                    <textarea id="skills" maxlength="64"
+                        required>HTML, CSS, JavaScript, CMS, Git, SCSS, PUG, GSAP</textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="date">Дата (10 символов):</label>
+                    <input type="text" id="date" name="date" maxlength="10" required value="22.05.2025">
+                </div>
+
+                <button type="submit">Сгенерировать</button>
+            </form>
+        </div>
+
+        <div class="output-section">
+            <h2>Ваш отпечаток:</h2>
+            <canvas id="pixelCanvas" width="256" height="256"></canvas>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
